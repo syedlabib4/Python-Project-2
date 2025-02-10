@@ -1,0 +1,28 @@
+import random
+
+
+def NotbiasedDice():
+ dice_facesForuser=[1,2,3,4,5,6]
+ return random.choice(dice_facesForuser)
+
+def biasedDice():
+ biasedDice_facesforComputer=[1,2,3,4,5,6,6,6,6,6,6,6,6]
+ return random.choice( biasedDice_facesforComputer)
+
+def rollDice():
+ input("Press enter to roll the dice")
+ userRoll=NotbiasedDice()
+ computerRoll=biasedDice()
+
+
+ print(f" You Rolled Dice : {userRoll} ")
+ print(f" Computer Roll Dice : {computerRoll} ")
+
+ if(userRoll > computerRoll):
+   print("you win")
+ elif (userRoll < computerRoll):
+        print("You lost! ")
+ else:
+        print("It's a tie! ") 
+
+rollDice()        
